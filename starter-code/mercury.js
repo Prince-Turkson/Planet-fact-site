@@ -26,7 +26,8 @@ secondaryButton.classList.remove('second-button');
 secondaryButton.classList.add('first-button') 
 
 thirdButton.classList.remove('second-button');
-thirdButton.classList.add('third-button')
+thirdButton.classList.add('third-button') 
+
 
 
 console.log(mercuryDetails);
@@ -57,6 +58,14 @@ thirdButton.classList.add('first-button');
     
 })
 
+
+
+primaryButton.addEventListener('click', function(){
+    window.location.href = document.referrer;
+
+
+    console.log(window.location.href);
+});
 
 
 
