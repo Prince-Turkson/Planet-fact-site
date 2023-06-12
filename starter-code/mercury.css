@@ -76,6 +76,7 @@ color: var(--primary-color);
 
 .buttons{
     margin-top: 2.4375rem;
+    cursor: pointer;
 }
 
 

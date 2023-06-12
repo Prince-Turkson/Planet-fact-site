@@ -44,7 +44,8 @@ const jsonData = [
       "images": {
         "planet": "./assets/planet-venus.svg",
         "internal": "./assets/planet-venus-internal.svg",
-        "geology": "./assets/geology-venus.png"
+        "geology": "./assets/geology-venus.png",
+        "mer": "./assets/planet-mercury-internal.svg"
       }
     },
     {
