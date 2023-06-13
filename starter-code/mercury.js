@@ -5,8 +5,11 @@ let currentIndex = 0;
 const secondaryButton = document.querySelector('.second-button') 
 const primaryButton = document.querySelector('.first-button')
 const thirdButton = document.querySelector('.third-button')
-const mercuryDetails = document.getElementById("mercury-details");
+const mercuryDetails = document.getElementById("mercury-details")
 const mercuryImage = document.getElementById("mercuryImage")
+const overview = document.getElementById("overview")
+const structure = document.getElementById("structure")
+const surface = document.getElementById("surface")
 
 
 
@@ -70,6 +73,38 @@ primaryButton.addEventListener('click', function(){
 
 
 
+// Event Listerners for mobile
+
+structure.addEventListener('click', function(event){
+    event.preventDefault();
+    let planetDetails = currentIndex ; 
+    
+    
+    console.log(planetData[planetDetails])
+    
+    mercuryDetails.textContent = planetData[planetDetails].structure.content
+    mercuryImage.src = planetData[planetDetails].images.internal
+    
+  
+    
+    
+    
+    console.log(mercuryDetails);
+    })
 
 
-// console.log(planetData[currentIndex]);
+    surface.addEventListener('click', function(event){
+        event.preventDefault();
+        let planetDetails = currentIndex ; 
+    
+        mercuryDetails.textContent = planetData[planetDetails].geology.content
+        mercuryImage.src = planetData[planetDetails].images.geology
+        
+    
+    
+   
+        
+    })
+
+
+
