@@ -41,7 +41,8 @@ thirdButton.addEventListener('click', function(){
     let planetDetails = currentIndex ; 
 
     mercuryDetails.textContent = planetData[planetDetails].geology.content
-mercuryImage.src = planetData[planetDetails].images.geology
+    mercuryImage.src = planetData[planetDetails].images.geology
+    
 
 
 primaryButton.classList.remove('first-button');

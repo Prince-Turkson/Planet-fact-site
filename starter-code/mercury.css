@@ -7,6 +7,7 @@
    body{
     background-image: url(./assets/background-stars.svg);
     background-color: var(--transparent-black);
+    height: 1020px;
    }
 
 :root{
@@ -205,11 +206,13 @@ text-transform: uppercase;
  border: 1px solid var(--primary-color);
     color: var(--primary-color);
     
-   
-   
-    
 }
 
+
+.second-button:hover{
+    background-color: var(--light-deep-gray);
+    border: none;
+}
 .second-button{
     display: flex;
     align-items: center;
