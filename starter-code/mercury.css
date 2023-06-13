@@ -34,9 +34,14 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 2.0625rem;
+    /* margin-top: 2.0625rem; */
+    padding-top: 2.0625rem;
 }
 
+
+.side-bar{
+    display: none;
+}
 
 .open img{
     display: none;
@@ -461,7 +466,8 @@ color: #FFFFFF;
 /* Media Queries for Tablets */ 
 @media only screen and (max-width:820px) and (min-width: 450px){
     body{
-       
+       width: 100%;
+       height: 950px;
     }
 
     .open img{
@@ -700,7 +706,7 @@ text-transform: uppercase;
 @media only screen and (max-width:425px) and (min-width:305px) { 
 
     body{
-     
+        width:100%;
         height: 950px;
     } 
 
@@ -1001,8 +1007,106 @@ color: #FFFFFF;
   text-transform: uppercase;
   
   color: #FFFFFF;
+  } 
+
+  .side-bar{
+    display: block;
   }
+
+  .side-bar{
+    width: 100%;
+    height: 950px;
+    position: fixed;
+    z-index:9;
+  }
+
+  .side-bar-container{
+    width: 100%;
+    height: 950px;
+
+    background: var(--transparent-black);
+   
+    
+  } 
+
+
+  .mobile-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2.0625rem;
+  }
+
+  .mobile-logo h1{
+    font-family: var(--Antonio);
+    font-style: normal;
+font-weight: 400;
+font-size: 28px;
+line-height: 36px;
+letter-spacing: -1.05px;
+text-transform: uppercase;
+
+color: var(--primary-color);
+  }
+
+  .close img{
+    mix-blend-mode: normal;
+    opacity: 0.25;
+  }
+
+
+.nav-line{
+    padding-top: 1rem;
+}
   
+.left-mercury{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.left-left{
+    display: flex;
+    align-items: center;
+    gap: 1.563rem;
+   
+   
+} 
+.planet-mobile-links{
+    padding: 2.75rem 2rem ;
+    
+    
+} 
+
+.planet-mobile-links{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.planet-mobile-links a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-family: var(--spartan);
+    font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 25px;
+/* identical to box height, or 167% */
+
+text-align: center;
+letter-spacing: 1.36364px;
+text-transform: uppercase;
+}
+
+
+.side-bar{
+    display: none;
+}
+
 
 
 } 
@@ -1021,5 +1125,9 @@ color: #FFFFFF;
     .mobile-line hr{
         width: 414px;
     }
+
+
+ 
+
 }
 
