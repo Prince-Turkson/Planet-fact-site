@@ -1,78 +1,26 @@
 import planetData from './data.js'
 
-let currentIndex = 0; 
+let currentIndex = 1; 
 
 const secondaryButton = document.querySelector('.second-button') 
 const primaryButton = document.querySelector('.first-button')
 const thirdButton = document.querySelector('.third-button')
-const mercuryDetails = document.getElementById("mercury-details")
-const mercuryImage = document.getElementById("mercuryImage")
+const venusDetails = document.getElementById("venus-details")
+const venusImage = document.getElementById("venusImage")
 const overview = document.getElementById("overview")
 const structure = document.getElementById("structure")
 const surface = document.getElementById("surface")
 
 
-
-secondaryButton.addEventListener('click', function(){
-let planetDetails = currentIndex ; 
-
-
-console.log(planetData[planetDetails])
-
-mercuryDetails.textContent = planetData[planetDetails].structure.content
-mercuryImage.src = planetData[planetDetails].images.internal
-
-primaryButton.classList.remove('first-button');
-primaryButton.classList.add('second-button');
-
-secondaryButton.classList.remove('second-button');
-secondaryButton.classList.add('first-button') 
-
-thirdButton.classList.remove('second-button');
-thirdButton.classList.add('third-button') 
-
-
-
-console.log(mercuryDetails);
-})
-
-
-
-
-thirdButton.addEventListener('click', function(){
-    currentIndex 
-    let planetDetails = currentIndex ; 
-
-    mercuryDetails.textContent = planetData[planetDetails].geology.content
-    mercuryImage.src = planetData[planetDetails].images.geology
-    
-
-
-primaryButton.classList.remove('first-button');
-primaryButton.classList.add('second-button');
-
-
-secondaryButton.classList.remove('third-button');
-secondaryButton.classList.add('second-button');
-
-
-thirdButton.classList.remove('third-button');
-thirdButton.classList.add('first-button');
-
-    
-})
-
-
-// Function to update the page content based on the current index
 function updatePageContent() {
     let planetDetails = currentIndex;
-    mercuryDetails.textContent = planetData[planetDetails].overview.content;
-    mercuryImage.src = planetData[planetDetails].images.planet;
+    venusDetails.textContent = planetData[planetDetails].overview.content;
+    venusImage.src = planetData[planetDetails].images.planet;
   }
 
 
 primaryButton.addEventListener('click', function () {
-    currentIndex = 0; // Go back to the default page
+    currentIndex = 1; // Go back to the default page
     updatePageContent();
   
     primaryButton.classList.remove('second-button');
@@ -91,6 +39,61 @@ primaryButton.addEventListener('click', function () {
 
 
 
+
+
+secondaryButton.addEventListener('click', function(){
+let planetDetails = currentIndex ; 
+
+
+console.log(planetData[planetDetails])
+
+venusDetails.textContent = planetData[planetDetails].structure.content
+venusImage.src = planetData[planetDetails].images.internal
+
+primaryButton.classList.remove('first-button');
+primaryButton.classList.add('second-button');
+
+secondaryButton.classList.remove('second-button');
+secondaryButton.classList.add('first-button') 
+
+thirdButton.classList.remove('second-button');
+thirdButton.classList.add('third-button') 
+
+
+
+console.log(venusDetails);
+})
+
+
+
+
+thirdButton.addEventListener('click', function(){
+    currentIndex 
+    let planetDetails = currentIndex ; 
+
+    venusDetails.textContent = planetData[planetDetails].geology.content
+    venusImage.src = planetData[planetDetails].images.geology
+    
+
+
+primaryButton.classList.remove('first-button');
+primaryButton.classList.add('second-button');
+
+
+secondaryButton.classList.remove('third-button');
+secondaryButton.classList.add('second-button');
+
+
+thirdButton.classList.remove('third-button');
+thirdButton.classList.add('first-button');
+
+    
+})
+
+
+
+
+
 // Event Listerners for mobile
 
 structure.addEventListener('click', function(event){
@@ -100,8 +103,8 @@ structure.addEventListener('click', function(event){
     
     console.log(planetData[planetDetails])
     
-    mercuryDetails.textContent = planetData[planetDetails].structure.content
-    mercuryImage.src = planetData[planetDetails].images.internal
+    venusDetails.textContent = planetData[planetDetails].structure.content
+    venusImage.src = planetData[planetDetails].images.internal
     
     primaryButton.classList.remove('first-button');
 primaryButton.classList.add('second-button');
@@ -115,7 +118,7 @@ thirdButton.classList.add('third-button')
     
     
     
-    console.log(mercuryDetails);
+    console.log(venusDetails);
     })
 
 
@@ -123,8 +126,8 @@ thirdButton.classList.add('third-button')
         event.preventDefault();
         let planetDetails = currentIndex ; 
     
-        mercuryDetails.textContent = planetData[planetDetails].geology.content
-        mercuryImage.src = planetData[planetDetails].images.geology
+        venusDetails.textContent = planetData[planetDetails].geology.content
+        venusImage.src = planetData[planetDetails].images.geology
         
         primaryButton.classList.remove('first-button');
         primaryButton.classList.add('second-button');
