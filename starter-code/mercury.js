@@ -104,13 +104,13 @@ structure.addEventListener('click', function(event){
     mercuryImage.src = planetData[planetDetails].images.internal
     
     primaryButton.classList.remove('first-button');
-primaryButton.classList.add('second-button');
+    primaryButton.classList.add('second-button');
 
-secondaryButton.classList.remove('second-button');
-secondaryButton.classList.add('first-button') 
+    secondaryButton.classList.remove('second-button');
+    secondaryButton.classList.add('first-button') 
 
-thirdButton.classList.remove('second-button');
-thirdButton.classList.add('third-button') 
+    thirdButton.classList.remove('second-button');
+    thirdButton.classList.add('third-button') 
   
     
     
