@@ -179,7 +179,7 @@ text-transform: uppercase;
 .first-button{
     width: 350px;
     height: 48px;
-    background-color: var(--light-violet);
+    background-color: var(--light-red);
     color: var(--primary-color);
     border: none;
     outline: none;

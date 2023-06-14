@@ -1,12 +1,12 @@
 import planetData from './data.js'
 
-let currentIndex = 2; 
+let currentIndex = 3; 
 
 const secondaryButton = document.querySelector('.second-button') 
 const primaryButton = document.querySelector('.first-button')
 const thirdButton = document.querySelector('.third-button')
-const earthDetails = document.getElementById("earth-details")
-const earthImage = document.getElementById("earthImage")
+const marsDetails = document.getElementById("mars-details")
+const marsImage = document.getElementById("marsImage")
 const overview = document.getElementById("overview")
 const structure = document.getElementById("structure")
 const surface = document.getElementById("surface")
@@ -14,13 +14,13 @@ const surface = document.getElementById("surface")
 
 function updatePageContent() {
     let planetDetails = currentIndex;
-    earthDetails.textContent = planetData[planetDetails].overview.content;
-    earthImage.src = planetData[planetDetails].images.planet;
+    marsDetails.textContent = planetData[planetDetails].overview.content;
+    marsImage.src = planetData[planetDetails].images.planet;
   }
 
 
 primaryButton.addEventListener('click', function () {
-    currentIndex = 2; // Go back to the default page
+    currentIndex = 3; // Go back to the default page
     updatePageContent();
   
     primaryButton.classList.remove('second-button');
@@ -47,8 +47,8 @@ let planetDetails = currentIndex ;
 
 console.log(planetData[planetDetails])
 
-earthDetails.textContent = planetData[planetDetails].structure.content
-earthImage.src = planetData[planetDetails].images.internal
+marsDetails.textContent = planetData[planetDetails].structure.content
+marsImage.src = planetData[planetDetails].images.internal
 
 primaryButton.classList.remove('first-button');
 primaryButton.classList.add('second-button');
@@ -61,7 +61,7 @@ thirdButton.classList.add('third-button')
 
 
 
-console.log(venusDetails);
+console.log(marsDetails);
 })
 
 
@@ -71,8 +71,8 @@ thirdButton.addEventListener('click', function(){
     currentIndex 
     let planetDetails = currentIndex ; 
 
-    earthDetails.textContent = planetData[planetDetails].geology.content
-    earthImage.src = planetData[planetDetails].images.geology
+    marsDetails.textContent = planetData[planetDetails].geology.content
+    marsImage.src = planetData[planetDetails].images.geology
     
 
 
@@ -103,8 +103,8 @@ structure.addEventListener('click', function(event){
     
     console.log(planetData[planetDetails])
     
-    earthDetails.textContent = planetData[planetDetails].structure.content
-    earthImage.src = planetData[planetDetails].images.internal
+    marsDetails.textContent = planetData[planetDetails].structure.content
+    marsImage.src = planetData[planetDetails].images.internal
     
     primaryButton.classList.remove('first-button');
 primaryButton.classList.add('second-button');
@@ -118,7 +118,7 @@ thirdButton.classList.add('third-button')
     
     
     
-    console.log(venusDetails);
+    console.log(marsDetails);
     })
 
 
@@ -126,8 +126,8 @@ thirdButton.classList.add('third-button')
         event.preventDefault();
         let planetDetails = currentIndex ; 
     
-        earthDetails.textContent = planetData[planetDetails].geology.content
-        earthImage.src = planetData[planetDetails].images.geology
+        marsDetails.textContent = planetData[planetDetails].geology.content
+        marsImage.src = planetData[planetDetails].images.geology
         
         primaryButton.classList.remove('first-button');
         primaryButton.classList.add('second-button');
@@ -143,6 +143,3 @@ thirdButton.classList.add('third-button')
    
         
     })
-
-
-
