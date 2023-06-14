@@ -6,11 +6,11 @@ const sideNavClose = document.querySelector('.close')
 
 
 sideNavOpen.addEventListener('click', () => {
-  sideContainer.style.display = 'block'; // Display the side nav container
+  sideContainer.style.display = 'block'; 
 });
 
 sideNavClose.addEventListener('click', () => {
-  sideContainer.style.display = 'none'; // Hide the side nav container
+  sideContainer.style.display = 'none'; 
 });
 
 
