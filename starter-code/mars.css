@@ -33,9 +33,9 @@
 .nav-bar{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     /* margin-top: 2.0625rem; */
-    padding-top: 2.0625rem;
+    padding: 2.0625rem 4rem;
 }
 
 
@@ -721,7 +721,7 @@ text-transform: uppercase;
 .nav-bar{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     
   
 }
