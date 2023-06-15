@@ -112,10 +112,10 @@ color: var(--primary-color);
 
 }
 
-/* #bigImage{
-  display: none;
-} */
 
+img#saturnImage {
+    width: 400px;
+}
 .solar-image img{
     width: 290px;
     width: 290px;
@@ -183,7 +183,7 @@ text-transform: uppercase;
 .first-button{
     width: 350px;
     height: 48px;
-    background-color: var(--blue-acqua-color);
+    background-color: var(--deep-orange);
     color: var(--primary-color);
     border: none;
     outline: none;

@@ -1,13 +1,13 @@
 import planetData from './data.js'
 
-let currentIndex = 1; 
+let currentIndex = 6; 
 let newImage = null;
 let firstButtonImage = null;
 const secondaryButton = document.querySelector('.second-button') 
 const primaryButton = document.querySelector('.first-button')
 const thirdButton = document.querySelector('.third-button')
-const venusDetails = document.getElementById("venus-details")
-const venusImage = document.getElementById("venusImage")
+const uranusDetails = document.getElementById("uranus-details")
+const uranusImage = document.getElementById("uranusImage")
 const overview = document.getElementById("overview")
 const structure = document.getElementById("structure")
 const surface = document.getElementById("surface")
@@ -20,8 +20,8 @@ let planetDetails = currentIndex ;
 
 console.log(planetData[planetDetails])
 
-venusDetails.textContent = planetData[planetDetails].structure.content
-venusImage.src = planetData[planetDetails].images.internal
+uranusDetails.textContent = planetData[planetDetails].structure.content
+uranusImage.src = planetData[planetDetails].images.internal
 
 primaryButton.classList.remove('first-button');
 primaryButton.classList.add('second-button');
@@ -35,8 +35,10 @@ thirdButton.classList.add('third-button')
 
 removeNewImage();
 
-console.log(venusDetails);
+console.log(uranusDetails);
 })
+
+
 
 
 thirdButton.addEventListener('click', function(){
@@ -45,8 +47,8 @@ thirdButton.addEventListener('click', function(){
 
  
 
-  venusDetails.textContent = planetData[planetDetails].geology.content;
-  venusImage.src = planetData[planetDetails ].images.planet;
+  uranusDetails.textContent = planetData[planetDetails].geology.content;
+  uranusImage.src = planetData[planetDetails ].images.planet;
   if (!newImage) {
     // Create the new image element and set its source
     newImage = document.createElement('img');
@@ -57,7 +59,7 @@ thirdButton.addEventListener('click', function(){
      newImage.style.position = 'relative' 
     //  newImage.style.right = '1rem';
     //  newImage.style.zIndex = '1'
-    document.querySelector('.venus-image').appendChild(newImage);
+    document.querySelector('.solar-image').appendChild(newImage);
   }
   primaryButton.classList.remove('first-button');
   primaryButton.classList.add('second-button');
@@ -67,16 +69,16 @@ thirdButton.addEventListener('click', function(){
 
   thirdButton.classList.remove('third-button');
   thirdButton.classList.add('first-button');
-  });
-  
-  
+
+    
+})
 
 
 // Function to update the page content based on the current index
 function updatePageContent() {
     let planetDetails = currentIndex;
-    venusDetails.textContent = planetData[planetDetails].overview.content;
-    venusImage.src = planetData[planetDetails].images.planet;
+    uranusDetails.textContent = planetData[planetDetails].overview.content;
+    uranusImage.src = planetData[planetDetails].images.planet;
 
   } 
 
@@ -90,11 +92,11 @@ function updatePageContent() {
 
 
 primaryButton.addEventListener('click', function () {
-    currentIndex = 1; // Go back to the default page
+    currentIndex = 6; // Go back to the default page
     updatePageContent();
     removeNewImage();
     firstButtonImage = planetData[currentIndex].images.planet; // Store the first button's image source
-venusImage.src = firstButtonImage; // Update the mercuryImage source
+  uranusImage.src = firstButtonImage; // Update the mercuryImage source
 
     primaryButton.classList.remove('second-button');
     primaryButton.classList.add('first-button');
@@ -123,8 +125,8 @@ structure.addEventListener('click', function(event){
     
     console.log(planetData[planetDetails])
     
-    venusDetails.textContent = planetData[planetDetails].structure.content
-    venusImage.src = planetData[planetDetails].images.internal
+    uranusDetails.textContent = planetData[planetDetails].structure.content
+    uranusImage.src = planetData[planetDetails].images.internal
 
     
     primaryButton.classList.remove('first-button');
@@ -140,7 +142,7 @@ structure.addEventListener('click', function(event){
     
     
     
-    console.log(venusDetails);
+    console.log(saturnDetails);
     })
 
 
@@ -148,8 +150,8 @@ structure.addEventListener('click', function(event){
         event.preventDefault();
         let planetDetails = currentIndex ; 
     
-        venusDetails.textContent = planetData[planetDetails].geology.content
-        venusImage.src = planetData[planetDetails].images.geology 
+        uranusDetails.textContent = planetData[planetDetails].geology.content
+        uranusImage.src = planetData[planetDetails].images.geology 
         
         
         primaryButton.classList.remove('first-button');
@@ -167,6 +169,9 @@ structure.addEventListener('click', function(event){
    
         
     })
+
+
+
 
 
 
