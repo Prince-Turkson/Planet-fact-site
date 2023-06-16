@@ -22,6 +22,7 @@ console.log(planetData[planetDetails])
 
 mercuryDetails.textContent = planetData[planetDetails].structure.content
 mercuryImage.src = planetData[planetDetails].images.internal
+console.log(mercuryImage)
 
 
 primaryButton.classList.remove('first-button');
@@ -74,7 +75,7 @@ thirdButton.addEventListener('click', function(){
 
     
 })
- console.log(hello)
+ 
 
 // Function to update the page content based on the current index
 function updatePageContent() {
