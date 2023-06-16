@@ -1,4 +1,4 @@
-import planetData from './data.js'
+import planetData from '../Planet-fact-site/starter-code/data/planet-data'
 
 let currentIndex = 0; 
 let newImage = null;
@@ -72,7 +72,7 @@ thirdButton.addEventListener('click', function(){
 
     
 })
-
+ console.log(hello)
 
 // Function to update the page content based on the current index
 function updatePageContent() {
