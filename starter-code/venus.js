@@ -3,6 +3,7 @@ import planetData from './data.js'
 let currentIndex = 1; 
 let newImage = null;
 let firstButtonImage = null;
+
 const secondaryButton = document.querySelector('.second-button') 
 const primaryButton = document.querySelector('.first-button')
 const thirdButton = document.querySelector('.third-button')
@@ -11,6 +12,7 @@ const venusImage = document.getElementById("venusImage")
 const overview = document.getElementById("overview")
 const structure = document.getElementById("structure")
 const surface = document.getElementById("surface")
+const daytext1 = document.querySelector('.day-text1')
 
 
 
@@ -22,6 +24,8 @@ console.log(planetData[planetDetails])
 
 venusDetails.textContent = planetData[planetDetails].structure.content
 venusImage.src = planetData[planetDetails].images.internal
+
+
 
 primaryButton.classList.remove('first-button');
 primaryButton.classList.add('second-button');
@@ -94,6 +98,7 @@ primaryButton.addEventListener('click', function () {
     updatePageContent();
     removeNewImage();
     firstButtonImage = planetData[currentIndex].images.planet; // Store the first button's image source
+    
 venusImage.src = firstButtonImage; // Update the mercuryImage source
 
     primaryButton.classList.remove('second-button');

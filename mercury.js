@@ -23,6 +23,7 @@ console.log(planetData[planetDetails])
 mercuryDetails.textContent = planetData[planetDetails].structure.content
 mercuryImage.src = planetData[planetDetails].images.internal
 
+
 primaryButton.classList.remove('first-button');
 primaryButton.classList.add('second-button');
 
