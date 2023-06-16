@@ -1,4 +1,4 @@
-import planetData from '../Planet-fact-site/starter-code/data/planet-data'
+import planetData from './starter-code/data.js'
 
 let currentIndex = 0; 
 let newImage = null;
@@ -36,8 +36,9 @@ thirdButton.classList.add('third-button')
 removeNewImage();
 
 console.log(mercuryDetails);
-})
+console.log("hello")
 
+})
 
 
 
@@ -107,8 +108,7 @@ primaryButton.addEventListener('click', function () {
     thirdButton.classList.remove('third-button');
     thirdButton.classList.add('second-button');
 
-    bigImage.style.display = 'none';
-    bigImage.style.width = '400px';
+    
   
   });
   
