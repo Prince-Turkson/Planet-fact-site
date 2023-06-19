@@ -1101,6 +1101,10 @@ color: var(--primary-color);
     
 } 
 
+.planet-mobile-links hr{
+  opacity: 0.2;
+}
+
 .planet-mobile-links{
     display: flex;
     flex-direction: column;
