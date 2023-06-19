@@ -59,8 +59,8 @@ thirdButton.addEventListener('click', function(){
      // Add a class to the new image for styling purposes
      newImage.style.width = '163px'; // Set the width of the new image
      newImage.style.position = 'relative' 
-     newImage.style.left = '5rem';
-     newImage.style.bottom = '2.5rem';
+     newImage.style.left = '6rem';
+     newImage.style.bottom = '9rem';
     //  newImage.style.right = '1rem';
     //  newImage.style.zIndex = '1'
     document.querySelector('.venus-image').appendChild(newImage);

@@ -548,7 +548,7 @@ top:2.438rem;
  }
     .line hr{
         position: relative;
-        top: 4rem;
+        top: 2%;
  
     }
 
@@ -596,7 +596,7 @@ font-family: var(--spartan);
 
 .days{
   position: relative;
-  top: 4rem;
+  top: 6rem;
   
 }
 
@@ -719,6 +719,10 @@ font-family: var(--Antonio);
 
 letter-spacing: -0.9px;
 text-transform: uppercase;
+}
+
+.solar-image img{
+    width: 184px;
 }
 
 }

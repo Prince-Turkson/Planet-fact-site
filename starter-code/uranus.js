@@ -58,7 +58,7 @@ thirdButton.addEventListener('click', function(){
      newImage.style.width = '163px'; // Set the width of the new image
      newImage.style.position = 'relative' 
      newImage.style.left = '4rem';
-     newImage.style.bottom = '2.5rem';
+     newImage.style.bottom = '8rem';
      newImage.style.zIndex = '1';
     //  newImage.style.right = '1rem';
     //  newImage.style.zIndex = '1'
