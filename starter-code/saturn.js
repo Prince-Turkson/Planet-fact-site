@@ -57,8 +57,8 @@ thirdButton.addEventListener('click', function(){
      // Add a class to the new image for styling purposes
      newImage.style.width = '163px'; // Set the width of the new image
      newImage.style.position = 'relative' 
-     newImage.style.left = '7.5rem';
-     newImage.style.bottom = '9rem';
+     newImage.style.left = '15.7rem';
+     newImage.style.bottom = '15rem';
      newImage.style.zIndex = '1';
     //  newImage.style.right = '1rem';
     //  newImage.style.zIndex = '1'

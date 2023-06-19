@@ -5,7 +5,7 @@
 }
 
    body{
-    background-image: url(./assets/background-stars.svg);
+    background-image: url(./starter-code/assets/background-stars.svg);
     background-color: var(--transparent-black);
   
    }
@@ -47,15 +47,27 @@
     display: none;
 } 
 
+.solar-image{
+
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    
+}
+
+.solar-image img{
+   
+}
+
+
+
+
+
 
  .mobile-links {
     display: none;
-}
-
-.solar-image{
-    position: relative;
-    display: flex;
-    flex-direction: column;
 }
 .nav-links a{
 text-decoration: none;
@@ -87,9 +99,6 @@ color: var(--primary-color);
 .line hr{
     width: 100%;
     height: 1px;
-    position: absolute;
-    left: 0px;
-    top: 5.3125rem;
     mix-blend-mode: normal;
     opacity: 0.2;
 }
@@ -118,9 +127,13 @@ color: var(--primary-color);
 
 }
 
+/* #bigImage{
+  display: none;
+} */
+
 .solar-image img{
-    width: 290px;
-    width: 290px;
+    width: 450px;
+ 
 }
 
 .middle-section{
@@ -185,7 +198,7 @@ text-transform: uppercase;
 .first-button{
     width: 350px;
     height: 48px;
-    background-color: var(--light-violet);
+    background-color: #6D2ED5;
     color: var(--primary-color);
     border: none;
     outline: none;
@@ -315,8 +328,11 @@ text-transform: uppercase;
             align-items: center;
             justify-content: space-around;
             margin-top: 5.438rem;
-            padding-bottom: 2.25rem;
           }
+
+          .days{
+            padding-bottom: 2rem
+            }
 
 
         .day1{
@@ -502,7 +518,7 @@ color: #FFFFFF;
         align-items: center;
         justify-content: center;
         gap: 4.313rem; 
-    
+        
         margin-top: 8.125rem;
        
     }
@@ -527,6 +543,8 @@ position: relative;
 top:2.438rem;
     }
 
+
+   
 
  .mobile-line hr{
    display: none;
@@ -706,19 +724,17 @@ text-transform: uppercase;
 }
 
 .solar-image img{
-    width: 285px;
+    width: 253px;
 }
-
 
 }
 
 /* Media queries for small screens */ 
 
-@media only screen and (max-width:425px) and (min-width:305px) { 
+@media only screen and (max-width:425px) and (min-width:275px) { 
 
     body{
         width:100%;
-        height: 950px;
     } 
 
 .nav-links{
@@ -733,7 +749,7 @@ text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    padding: 1rem 1.5rem;
   
 }
 
@@ -751,7 +767,7 @@ text-transform: uppercase;
 }
 
 .line hr{
-width: 375px;
+width: 100%;
 height: 1px;
 mix-blend-mode: normal;
 opacity: 0.2;
@@ -778,18 +794,19 @@ text-align: center;
 letter-spacing: 1.92857px;
 text-transform: uppercase;
 color: var(--primary-color);
-margin-top: 2.5rem;
+/* margin-top: 2.5rem; */
+padding: 1.25rem 1.5rem;
 display: block  ;
 }
 
 
 .mobile-line hr{
-width: 375px;
+width: 100%;
 height: 1px;
 background: var(--primary-color);
 mix-blend-mode: normal;
 opacity: 0.2;
-margin-top: 1rem;
+
 display: block;
 }
 
@@ -851,7 +868,8 @@ margin: 1rem auto;
   height: 48px;
   display: flex;
   align-items: center;
-  justify-content: space-around;   
+  justify-content: space-between;
+  padding: 0 1.5rem; 
   mix-blend-mode: normal;
 
 border: 1px solid #FFFFFF;
@@ -896,8 +914,12 @@ color: #FFFFFF;
     height: 48px;
     display: flex;
     align-items: center;
-    justify-content: space-around;   
+    justify-content: space-between;
+    padding: 0 1.5rem;  
+    
+    
     mix-blend-mode: normal;
+   
 
   border: 1px solid #FFFFFF;
   }
@@ -941,9 +963,9 @@ color: #FFFFFF;
     height: 48px;
     display: flex;
     align-items: center;
-    justify-content: space-around;   
+    justify-content: space-between;   
     mix-blend-mode: normal;
-
+  padding: 0 1.5rem;
   border: 1px solid #FFFFFF;
   }
   
@@ -983,9 +1005,10 @@ color: #FFFFFF;
     height: 48px;
     display: flex;
     align-items: center;
-    justify-content: space-around;   
+    justify-content: space-between;
+    padding: 0 1.5rem;   
     mix-blend-mode: normal;
-
+ 
   border: 1px solid #FFFFFF;
   }
   
@@ -1090,6 +1113,10 @@ color: var(--primary-color);
     
 } 
 
+.planet-mobile-links hr{
+  opacity: 0.2;
+}
+
 .planet-mobile-links{
     display: flex;
     flex-direction: column;
@@ -1122,10 +1149,11 @@ text-transform: uppercase;
 
 } 
 
-@media only screen and (max-width:425px) and (min-width:305px){
+@media only screen and (max-width:375px) and (min-width:275px){
     body{
-       
-    }
+        width:100%;
+        /* height: 950px; */
+    } 
 
 
     .line hr{
@@ -1141,4 +1169,15 @@ text-transform: uppercase;
  
 
 }
+
+/* @media only screen and (max-width:360px) and (min-width:275px){
+ 
+     body{
+       
+        overflow-x: hidden;
+        
+    } 
+
+
+} */
 
