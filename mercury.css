@@ -47,6 +47,24 @@
     display: none;
 } 
 
+.solar-image{
+
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    
+}
+
+.solar-image img{
+   
+}
+
+
+
+
+
 
  .mobile-links {
     display: none;

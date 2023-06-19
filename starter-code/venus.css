@@ -39,6 +39,15 @@
 }
 
 
+.venus-image {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+
+
 .side-bar{
     display: none;
 }
