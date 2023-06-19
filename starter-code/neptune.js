@@ -57,8 +57,10 @@ thirdButton.addEventListener('click', function(){
      // Add a class to the new image for styling purposes
      newImage.style.width = '163px'; // Set the width of the new image
      newImage.style.position = 'relative' 
-    //  newImage.style.right = '1rem';
-    //  newImage.style.zIndex = '1'
+     newImage.style.left = '4rem';
+     newImage.style.bottom = '2.5rem';
+     newImage.style.zIndex = '1';
+
     document.querySelector('.solar-image').appendChild(newImage);
   }
   primaryButton.classList.remove('first-button');

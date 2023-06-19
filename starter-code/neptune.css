@@ -64,6 +64,10 @@ text-transform: uppercase;
 color: var(--primary-color)
 } 
 
+.solar-image{
+    display: flex;
+    flex-direction: column;
+}
 
 .logo h1{
 font-style: normal;

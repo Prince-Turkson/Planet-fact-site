@@ -48,6 +48,12 @@
 } 
 
 
+.solar-image{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
  .mobile-links {
     display: none;
 }

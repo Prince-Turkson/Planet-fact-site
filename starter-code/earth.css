@@ -51,6 +51,12 @@
  .mobile-links {
     display: none;
 }
+
+.solar-image{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 .nav-links a{
 text-decoration: none;
 text-transform: uppercase;
