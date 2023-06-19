@@ -316,6 +316,7 @@ text-transform: uppercase;
             align-items: center;
             justify-content: space-around;
             margin-top: 5.438rem;
+            padding-bottom: 2.25rem;
           }
 
 
@@ -502,8 +503,8 @@ color: #FFFFFF;
         align-items: center;
         justify-content: center;
         gap: 4.313rem; 
-        position: relative;
-        top: 8.125rem;
+        
+        margin-top: 8.125rem;
        
     }
 
@@ -580,8 +581,7 @@ font-family: var(--spartan);
 
 
 .days{
-  position: relative;
-  top: 6rem;
+
   
 }
 

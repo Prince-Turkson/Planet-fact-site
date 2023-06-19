@@ -333,6 +333,10 @@ text-transform: uppercase;
             margin-top: 5.438rem;
           }
 
+          .days{
+            padding-bottom: 2rem
+            }
+
 
         .day1{
             width: 255px;
@@ -517,8 +521,8 @@ color: #FFFFFF;
         align-items: center;
         justify-content: center;
         gap: 4.313rem; 
-        position: relative;
-        top: 8.125rem;
+        
+        margin-top: 8.125rem;
        
     }
 
@@ -543,12 +547,14 @@ top:2.438rem;
     }
 
 
+   
+
  .mobile-line hr{
    display: none;
  }
     .line hr{
         position: relative;
-        top: 2%;
+        top: 2rem;
  
     }
 
@@ -595,8 +601,7 @@ font-family: var(--spartan);
 
 
 .days{
-  position: relative;
-  top: 6rem;
+ 
   
 }
 
