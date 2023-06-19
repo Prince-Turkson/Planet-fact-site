@@ -1065,8 +1065,8 @@ color: #FFFFFF;
   .mobile-nav{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding-top: 2.0625rem;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
   }
 
   .mobile-logo h1{
