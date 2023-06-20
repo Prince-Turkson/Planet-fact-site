@@ -51,20 +51,28 @@ thirdButton.addEventListener('click', function(){
 
   venusDetails.textContent = planetData[planetDetails].geology.content;
   venusImage.src = planetData[planetDetails ].images.planet;
-  if (!newImage) {
-    // Create the new image element and set its source
-    newImage = document.createElement('img');
-    newImage.src = planetData[planetDetails].images.geology;
-    newImage.classList.add('new-image');
-     // Add a class to the new image for styling purposes
-     newImage.style.width = '163px'; // Set the width of the new image
-     newImage.style.position = 'relative' 
-     newImage.style.left = '6rem';
-     newImage.style.bottom = '9rem';
-    //  newImage.style.right = '1rem';
-    //  newImage.style.zIndex = '1'
-    document.querySelector('.venus-image').appendChild(newImage);
+   
+if (!newImage) {
+  // Create the new image element and set its source
+  newImage = document.createElement('img');
+  newImage.src = planetData[planetDetails].images.geology;
+  newImage.classList.add('new-image');
+
+  // Add different styling for tablet view
+  if (window.innerWidth <= 768) {
+    newImage.style.width = '184px'; // Set the width of the new image for tablets
+    newImage.style.left = '0';
+    newImage.style.zIndex = '1';
+  } else {
+    newImage.style.width = '163px'; // Set the width of the new image for desktops
+    newImage.style.position = 'relative';
+    newImage.style.left = '0';
+    newImage.style.bottom = '8rem';
+    newImage.style.zIndex = '1';
   }
+
+  document.querySelector('.venus-image').appendChild(newImage);
+}
   primaryButton.classList.remove('first-button');
   primaryButton.classList.add('second-button');
 

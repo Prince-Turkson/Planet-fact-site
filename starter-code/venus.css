@@ -43,7 +43,7 @@
         display: flex;
     flex-direction: column;
     position: relative;
-    
+    align-items: center;
 }
 
 
@@ -502,6 +502,14 @@ color: #FFFFFF;
         display: flex;
         flex-direction: column;
     }
+
+    .venus-image {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
 
   
 
