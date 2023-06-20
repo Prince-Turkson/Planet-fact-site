@@ -1119,7 +1119,7 @@ color: var(--primary-color);
 .planet-mobile-links{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 
