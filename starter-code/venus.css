@@ -96,9 +96,7 @@ color: var(--primary-color);
 .line hr{
     width: 100%;
     height: 1px;
-    position: absolute;
-    left: 0px;
-    top: 5.3125rem;
+   
     mix-blend-mode: normal;
     opacity: 0.2;
 }
@@ -767,10 +765,15 @@ opacity: 0.2;
 background: var(--primary-color);
 }
 
+#overview{
+    border-bottom: 5px solid #EDA249;
+}
+
 .mobile-links {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 1.5rem;
 
 } 
 
@@ -788,7 +791,7 @@ letter-spacing: 1.92857px;
 text-transform: uppercase;
 color: var(--primary-color);
 /* margin-top: 2.5rem; */
-padding: 1.25rem 1.5rem;
+padding: 1.25rem 0;
 display: block  ;
 }
 
@@ -809,10 +812,6 @@ display: block;
     flex-direction: column;
 }
 
-.solar-image img{
-    width: 111px;
-    height: 111px;
-}
 
 .middle-heading h1{
     font-style: normal;
@@ -849,8 +848,8 @@ margin: 1rem auto;
 }
 
 
-img#venusImage {
-    width: 350px;
+img#venusImage{
+    width: 154px;
 }
 .days{
     display: flex;

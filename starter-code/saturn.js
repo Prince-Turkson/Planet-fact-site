@@ -142,6 +142,9 @@ structure.addEventListener('click', function(event){
     thirdButton.classList.add('third-button') 
   
     overview.style.borderBottom = '0';
+    structure.style.borderBottom = '5px solid #CD5120';
+    surface.style.borderBottom = '0';
+    
     
     
     
@@ -170,6 +173,9 @@ structure.addEventListener('click', function(event){
       
     
         overview.style.borderBottom = '0';
+    structure.style.borderBottom = '0';
+    surface.style.borderBottom = '5px solid #CD5120';
+    
         
     })
 

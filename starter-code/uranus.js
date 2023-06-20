@@ -142,10 +142,13 @@ structure.addEventListener('click', function(event){
     thirdButton.classList.add('third-button') 
   
     overview.style.borderBottom = '0';
+    structure.style.borderBottom = '5px solid #1EC1A2';
+    surface.style.borderBottom = '0';
     
     
     
-    console.log(saturnDetails);
+    
+    console.log(uranusDetails);
     })
 
 
@@ -170,6 +173,9 @@ structure.addEventListener('click', function(event){
       
     
         overview.style.borderBottom = '0';
+        structure.style.borderBottom = '5px solid #1EC1A2';
+        surface.style.borderBottom = '0';
+        
         
     })
 

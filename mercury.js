@@ -144,7 +144,8 @@ structure.addEventListener('click', function(event){
   
   
     overview.style.borderBottom = '0';
-    
+    structure.style.borderBottom = '5px solid #419EBB';
+    surface.style.borderBottom = '0';
     
     console.log(mercuryDetails);
     })
@@ -170,7 +171,9 @@ structure.addEventListener('click', function(event){
         thirdButton.classList.add('first-button'); 
       
     
-        overview.style.borderBottom = '0';   
+        overview.style.borderBottom = '0'; 
+        surface.style.borderBottom = '5px solid #419EBB';
+        structure.style.borderBottom = '0';
         
     })
 
