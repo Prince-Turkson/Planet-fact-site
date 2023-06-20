@@ -141,7 +141,7 @@ structure.addEventListener('click', function(event){
     thirdButton.classList.remove('second-button');
     thirdButton.classList.add('third-button') 
   
-  
+    overview.style.borderBottom = '0';
     
     
     
@@ -169,7 +169,7 @@ structure.addEventListener('click', function(event){
         thirdButton.classList.add('first-button'); 
       
     
-   
+        overview.style.borderBottom = '0';
         
     })
 

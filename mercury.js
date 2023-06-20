@@ -143,7 +143,7 @@ structure.addEventListener('click', function(event){
     thirdButton.classList.add('third-button') 
   
   
-    
+    overview.style.borderBottom = '0';
     
     
     console.log(mercuryDetails);
@@ -170,7 +170,7 @@ structure.addEventListener('click', function(event){
         thirdButton.classList.add('first-button'); 
       
     
-   
+        overview.style.borderBottom = '0';   
         
     })
 

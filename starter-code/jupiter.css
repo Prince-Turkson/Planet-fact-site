@@ -794,7 +794,7 @@ letter-spacing: 1.92857px;
 text-transform: uppercase;
 color: var(--primary-color);
 /* margin-top: 2.5rem; */
-padding: 1.25rem 1.5rem;
+padding: 1.25rem 0;
 display: block  ;
 }
 
@@ -1144,7 +1144,10 @@ text-transform: uppercase;
     display: none;
 }
 
-
+#overview {
+    border-bottom: 5px solid #D83A34;
+    ;
+}
 
 } 
 
@@ -1168,6 +1171,7 @@ text-transform: uppercase;
  
 
 }
+
 
 /* @media only screen and (max-width:360px) and (min-width:275px){
  
