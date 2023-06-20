@@ -156,16 +156,38 @@ structure.addEventListener('click', function(event){
     structure.style.borderBottom = '5px solid #419EBB';
     surface.style.borderBottom = '0';
     
+
+    removeNewImage();
     console.log(mercuryDetails);
-    })
+    }) 
+
+
+
+
+
+
 
 
     surface.addEventListener('click', function(event){
         event.preventDefault();
-        let planetDetails = currentIndex ; 
+        currentIndex 
+    let planetDetails = currentIndex ; 
+    if (!newImage) {
+      // Create the new image element and set its source
+      newImage = document.createElement('img');
+      newImage.src = planetData[planetDetails].images.geology;
+      newImage.classList.add('new-image');
+      newImage.style.position = 'relative'
+      newImage.style.bottom = '2rem';
     
-        mercuryDetails.textContent = planetData[planetDetails].geology.content
-        mercuryImage.src = planetData[planetDetails].images.geology 
+      document.querySelector('.solar-image').appendChild(newImage);
+    }
+
+ 
+
+  mercuryDetails.textContent = planetData[planetDetails].geology.content;
+  mercuryImage.src = planetData[planetDetails ].images.planet;
+  
         
         
         primaryButton.classList.remove('first-button');

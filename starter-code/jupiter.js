@@ -152,7 +152,7 @@ structure.addEventListener('click', function(event){
     structure.style.borderBottom = '5px solid #D83A34';
     surface.style.borderBottom = '0';
     
-    
+    removeNewImage();
     
     
     console.log(jupiterDetails);
@@ -164,7 +164,18 @@ structure.addEventListener('click', function(event){
         let planetDetails = currentIndex ; 
     
         jupiterDetails.textContent = planetData[planetDetails].geology.content
-        jupiterImage.src = planetData[planetDetails].images.geology 
+        jupiterImage.src = planetData[planetDetails ].images.planet;
+        if (!newImage) {
+          // Create the new image element and set its source
+          newImage = document.createElement('img');
+          newImage.src = planetData[planetDetails].images.geology;
+          newImage.classList.add('new-image');
+          newImage.style.position = 'relative'
+          newImage.style.bottom = '2rem';
+
+          document.querySelector('.solar-image').appendChild(newImage);
+
+        }
         
         
         primaryButton.classList.remove('first-button');

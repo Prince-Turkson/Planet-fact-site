@@ -54,20 +54,14 @@ thirdButton.addEventListener('click', function(){
     newImage = document.createElement('img');
     newImage.src = planetData[planetDetails].images.geology;
     newImage.classList.add('new-image');
-  
-    // Add different styling for tablet view
-    if (window.innerWidth <= 768) {
-      newImage.style.width = '184px'; // Set the width of the new image for tablets
-      newImage.style.left = '0';
-      newImage.style.zIndex = '1';
-    } else {
-      newImage.style.width = '163px'; // Set the width of the new image for desktops
-      newImage.style.position = 'relative';
-      newImage.style.left = '0';
-      newImage.style.bottom = '8rem';
-      newImage.style.zIndex = '1';
-    }
-  
+     // Add a class to the new image for styling purposes
+     newImage.style.width = '163px'; // Set the width of the new image
+     newImage.style.position = 'relative' 
+     newImage.style.left = '5.5rem';
+     newImage.style.bottom = '8rem';
+     newImage.style.zIndex = '1';
+    //  newImage.style.right = '1rem';
+    //  newImage.style.zIndex = '1'
     document.querySelector('.solar-image').appendChild(newImage);
   }
   primaryButton.classList.remove('first-button');
@@ -152,7 +146,7 @@ structure.addEventListener('click', function(event){
     structure.style.borderBottom = '5px solid #D14C32';
     surface.style.borderBottom = '0';
     
-    
+    removeNewImage();
     console.log(marsDetails);
     })
 
@@ -162,7 +156,16 @@ structure.addEventListener('click', function(event){
         let planetDetails = currentIndex ; 
     
         marsDetails.textContent = planetData[planetDetails].geology.content
-        marsImage.src = planetData[planetDetails].images.geology 
+        marsImage.src = planetData[planetDetails ].images.planet;
+        if (!newImage) {
+          // Create the new image element and set its source
+          newImage = document.createElement('img');
+          newImage.src = planetData[planetDetails].images.geology;
+          newImage.classList.add('new-image');
+
+          document.querySelector('.solar-image').appendChild(newImage);
+
+        }
         
         
         primaryButton.classList.remove('first-button');

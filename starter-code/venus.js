@@ -155,7 +155,7 @@ structure.addEventListener('click', function(event){
     structure.style.borderBottom = '5px solid #EDA249';
     surface.style.borderBottom = '0';
     
-    
+    removeNewImage();
     
     console.log(venusDetails);
     })
@@ -166,7 +166,20 @@ structure.addEventListener('click', function(event){
         let planetDetails = currentIndex ; 
     
         venusDetails.textContent = planetData[planetDetails].geology.content
-        venusImage.src = planetData[planetDetails].images.geology 
+        venusImage.src = planetData[planetDetails ].images.planet;
+        if (!newImage) {
+          // Create the new image element and set its source
+          newImage = document.createElement('img');
+          newImage.src = planetData[planetDetails].images.geology;
+          newImage.classList.add('new-image');
+          newImage.style.position = 'relative'
+          newImage.style.bottom = '2rem';
+          newImage.style.width = '111px';
+
+          document.querySelector('.venus-image').appendChild(newImage);
+
+
+        }
         
         
         primaryButton.classList.remove('first-button');

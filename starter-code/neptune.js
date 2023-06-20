@@ -149,7 +149,7 @@ structure.addEventListener('click', function(event){
     structure.style.borderBottom = '5px solid #2D68F0';
     surface.style.borderBottom = '0';
     
-  
+    removeNewImage();
     
     
     
@@ -162,7 +162,18 @@ structure.addEventListener('click', function(event){
         let planetDetails = currentIndex ; 
     
         neptuneDetails.textContent = planetData[planetDetails].geology.content
-        neptuneImage.src = planetData[planetDetails].images.geology 
+        neptuneImage.src = planetData[planetDetails ].images.planet;
+        if (!newImage) {
+          // Create the new image element and set its source
+          newImage = document.createElement('img');
+          newImage.src = planetData[planetDetails].images.geology;
+          newImage.classList.add('new-image');
+          newImage.style.position = 'relative'
+          newImage.style.bottom = '2rem';
+
+          document.querySelector('.solar-image').appendChild(newImage);
+
+        }
         
         
         primaryButton.classList.remove('first-button');

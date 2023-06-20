@@ -153,7 +153,7 @@ structure.addEventListener('click', function(event){
     surface.style.borderBottom = '0';
     
     
-    
+    removeNewImage();
     
     console.log(saturnDetails);
     })
@@ -164,7 +164,18 @@ structure.addEventListener('click', function(event){
         let planetDetails = currentIndex ; 
     
         saturnDetails.textContent = planetData[planetDetails].geology.content
-        saturnImage.src = planetData[planetDetails].images.geology 
+        saturnImage.src = planetData[planetDetails ].images.planet;
+        if (!newImage) {
+          // Create the new image element and set its source
+          newImage = document.createElement('img');
+          newImage.src = planetData[planetDetails].images.geology;
+          newImage.classList.add('new-image');
+          newImage.style.position = 'relative'
+          newImage.style.bottom = '7rem';
+          newImage.style.width = '111px';
+          document.querySelector('.solar-image').appendChild(newImage);
+
+        }
         
         
         primaryButton.classList.remove('first-button');

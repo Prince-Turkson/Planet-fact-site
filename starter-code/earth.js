@@ -153,7 +153,7 @@ structure.addEventListener('click', function(event){
     
     
   
-  
+    removeNewImage();
     
     
     
@@ -166,7 +166,18 @@ structure.addEventListener('click', function(event){
         let planetDetails = currentIndex ; 
     
         earthDetails.textContent = planetData[planetDetails].geology.content
-        earthImage.src = planetData[planetDetails].images.geology 
+        earthImage.src = planetData[planetDetails ].images.planet;
+        if (!newImage) {
+          // Create the new image element and set its source
+          newImage = document.createElement('img');
+          newImage.src = planetData[planetDetails].images.geology;
+          newImage.classList.add('new-image');
+          newImage.style.position = 'relative'
+          newImage.style.bottom = '2rem';
+
+          document.querySelector('.solar-image').appendChild(newImage);
+
+        }
         
         
         primaryButton.classList.remove('first-button');
