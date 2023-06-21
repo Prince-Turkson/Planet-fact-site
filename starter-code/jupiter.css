@@ -5,7 +5,7 @@
 }
 
    body{
-    background-image: url(./starter-code/assets/background-stars.svg);
+    background-image: url(./assets/background-stars.svg);
     background-color: var(--transparent-black);
   
    }
@@ -596,10 +596,9 @@ font-family: var(--spartan);
 }
 
 
-.days{
- 
-  
-}
+
+
+
 
 .day1{
     width: 164px;
@@ -1172,15 +1171,14 @@ text-transform: uppercase;
 
 }
 
-
-/* @media only screen and (max-width:360px) and (min-width:275px){
- 
-     body{
-       
-        overflow-x: hidden;
-        
-    } 
-
-
+/* @media only screen and (max-width:768px) and (min-width: 428px){
+    img .new-image{
+        width: 5rem;
+        position: relative;
+        left: 0px;
+        bottom: 4rem;
+        z-index: 1;
+      
+    }
 } */
 

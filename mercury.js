@@ -43,37 +43,46 @@ console.log("hello")
 })
 
 
-
-thirdButton.addEventListener('click', function(){
-    currentIndex 
-    let planetDetails = currentIndex ; 
-
- 
+thirdButton.addEventListener('click', function() {
+  currentIndex;
+  let planetDetails = currentIndex;
 
   mercuryDetails.textContent = planetData[planetDetails].geology.content;
-  mercuryImage.src = planetData[planetDetails ].images.planet;
-  
-if (!newImage) {
-  // Create the new image element and set its source
-  newImage = document.createElement('img');
-  newImage.src = planetData[planetDetails].images.geology;
-  newImage.classList.add('new-image');
+  mercuryImage.src = planetData[planetDetails].images.planet;
 
-  // Add different styling for tablet view
-  if (window.innerWidth <= 768) {
-    newImage.style.width = '184px'; // Set the width of the new image for tablets
-    newImage.style.left = '0';
-    newImage.style.zIndex = '1';
-  } else {
-    newImage.style.width = '163px'; // Set the width of the new image for desktops
+  if (!newImage) {
+    // Create the new image element and set its source
+    newImage = document.createElement('img');
+    newImage.src = planetData[planetDetails].images.geology;
+    newImage.classList.add('new-image'); // Add the 'new-image' class to the element
+
+    // Function to handle image width adjustment
+    const adjustImageWidth = function(mediaQuery) {
+      if (mediaQuery.matches) {
+        newImage.style.width = '5rem'; // Set the width of the new image for tablets
+      } else {
+        newImage.style.width = '163px'; // Set the width of the new image for desktops
+      }
+    };
+
+    // Call the function initially to set the width based on the current media query result
+    const initialMediaQuery = window.matchMedia('(max-width: 820px)');
+    adjustImageWidth(initialMediaQuery);
+
+    // Add event listener for media query changes to adjust the image width dynamically
+    initialMediaQuery.addEventListener('change', function(event) {
+      adjustImageWidth(event.target);
+    });
+
+    // Set initial position and zIndex
     newImage.style.position = 'relative';
-    newImage.style.left = '4rem';
-    newImage.style.bottom = '8rem';
+    newImage.style.left = '0';
+    newImage.style.bottom = '4.5rem';
     newImage.style.zIndex = '1';
+
+    document.querySelector('.solar-image').appendChild(newImage);
   }
 
-  document.querySelector('.solar-image').appendChild(newImage);
-}
   primaryButton.classList.remove('first-button');
   primaryButton.classList.add('second-button');
 
@@ -82,9 +91,8 @@ if (!newImage) {
 
   thirdButton.classList.remove('third-button');
   thirdButton.classList.add('first-button');
+});
 
-    
-})
  
 
 // Function to update the page content based on the current index
@@ -157,7 +165,7 @@ structure.addEventListener('click', function(event){
     surface.style.borderBottom = '0';
     
 
-    removeNewImage();
+        removeNewImage();
     console.log(mercuryDetails);
     }) 
 
