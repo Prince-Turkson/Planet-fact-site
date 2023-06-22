@@ -168,39 +168,51 @@ structure.addEventListener('click', function(event){
     })
 
 
-    surface.addEventListener('click', function(event){
-        event.preventDefault();
-        let planetDetails = currentIndex ; 
+    surface.addEventListener('click', function(event) {
+      event.preventDefault();
+      currentIndex;
+      let planetDetails = currentIndex;
     
-        marsDetails.textContent = planetData[planetDetails].geology.content
-        marsImage.src = planetData[planetDetails ].images.planet;
-        if (!newImage) {
-          // Create the new image element and set its source
-          newImage = document.createElement('img');
-          newImage.src = planetData[planetDetails].images.geology;
-          newImage.classList.add('new-image');
-
-          document.querySelector('.solar-image').appendChild(newImage);
-
+      if (!newImage) {
+        // Create the new image element and set its source
+        newImage = document.createElement('img');
+        newImage.src = planetData[planetDetails].images.geology;
+        newImage.classList.add('new-image');
+        newImage.style.position = 'relative';
+        newImage.style.bottom = '5rem';
+    
+        document.querySelector('.solar-image').appendChild(newImage);
+      }
+    
+      marsDetails.textContent = planetData[planetDetails].geology.content;
+      marsImage.src = planetData[planetDetails].images.planet;
+    
+      primaryButton.classList.remove('first-button');
+      primaryButton.classList.add('second-button');
+    
+      secondaryButton.classList.remove('third-button');
+      secondaryButton.classList.add('second-button');
+    
+      thirdButton.classList.remove('third-button');
+      thirdButton.classList.add('first-button');
+    
+      overview.style.borderBottom = '0';
+      surface.style.borderBottom = '5px solid #D14C32';
+      structure.style.borderBottom = '0';
+    
+      // Check if the surface is clicked on a mobile device
+      const mobileMediaQuery = window.matchMedia('(max-width: 480px)');
+      if (mobileMediaQuery.matches) {
+        if (newImage) {
+          newImage.style.width = '90px'; // Set the width of the new image to 111px on mobile
         }
-        
-        
-        primaryButton.classList.remove('first-button');
-        primaryButton.classList.add('second-button');
-        
-        
-        secondaryButton.classList.remove('third-button');
-        secondaryButton.classList.add('second-button');
-        
-        
-        thirdButton.classList.remove('third-button');
-        thirdButton.classList.add('first-button'); 
-      
-        overview.style.borderBottom = '0';
-    structure.style.borderBottom = '0';
-    surface.style.borderBottom = '5px solid #D14C32';
-        
-    })
+      } else {
+        if (newImage) {
+          newImage.style.width = '163px'; // Set the default width of 163px for larger screens
+        }
+      }
+    });
+    
 
 
 
